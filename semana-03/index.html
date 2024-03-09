@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 03</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .return {
+            text-decoration: none;
+        }
+        button {
+            margin-bottom: 5px;
+        }
+        #response-ex01 , #response-ex02 {
+            margin: 15px;
+        }
+        .container-ex03 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="return">Retornar a página principal</a>
+    <div class="container">
+        <h1>Semana 03</h1>
+        <button onclick="ex01()">Exercício 1</button>
+        <div id="response-ex01"></div>
+        <button onclick="ex02()">Exercício 2</button>
+        <div id="response-ex02"></div>
+        <div class="container-ex03">
+            <p id="title-ex03">Exercício 3</p>
+            <form id="form" onsubmit="event.preventDefault();">
+                <label for="data">Digite uma palavra ou frase:</label>
+                <input type="text" name="data" id="data">
+                <button type="submit" onclick="ex03()">Verificar</button>        
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
