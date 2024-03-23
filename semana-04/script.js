@@ -17,6 +17,7 @@ function Pessoa(){
     var dataNascimento;
     var telefoneFixo;
     var telefoneCelular;
+    var matricula;
 
     this.setNome = function(vNome){
         this.nome = vNome;
@@ -51,6 +52,13 @@ function Pessoa(){
     }
     this.getTelefoneCelular = function(){
         return this.telefoneCelular;
+    }
+
+    this.setMatricula = function(vMatricula){
+        this.matricula = vMatricula;
+    }
+    this.getMatricula = function(){
+        return this.matricula;
     }
 }
 
@@ -106,6 +114,7 @@ function main() {
         aluno.setDataNascimento(convertDateToPtBr(document.getElementById('data-nascimento').value));
         aluno.setTelefoneFixo(document.getElementById('telefone-fixo').value);
         aluno.setTelefoneCelular(document.getElementById('telefone-celular').value);
+        aluno.setMatricula(document.getElementById('matricula').value);
         aluno.setCurso(document.getElementById('curso').value);
         alert("DADOS DO ALUNO" +
         "\nNome: " + aluno.getNome() +
@@ -113,6 +122,7 @@ function main() {
         "\nData de nascimento: " + aluno.getDataNascimento() +
         "\nTelefone fixo: " + aluno.getTelefoneFixo() +
         "\nTelefone celular: " + aluno.getTelefoneCelular() +
+        "\nMatrícula: " + aluno.getMatricula() +
         "\nCurso: " + aluno.getCurso());
     } else if (document.getElementById('professor').checked) {
         var professor = new Professor();
@@ -121,6 +131,7 @@ function main() {
         professor.setDataNascimento(convertDateToPtBr(document.getElementById('data-nascimento').value));
         professor.setTelefoneFixo(document.getElementById('telefone-fixo').value);
         professor.setTelefoneCelular(document.getElementById('telefone-celular').value);
+        professor.setMatricula(document.getElementById('matricula').value);
         professor.setArea(document.getElementById('area-atuacao').value);
         professor.setLattes(document.getElementById('link-lattes').value);
         alert("DADOS DO PROFESSOR" +
@@ -129,6 +140,7 @@ function main() {
         "\nData de nascimento: " + professor.getDataNascimento() +
         "\nTelefone fixo: " + professor.getTelefoneFixo() +
         "\nTelefone celular: " + professor.getTelefoneCelular() +
+        "\nMatrícula: " + professor.getMatricula() +
         "\nÁrea de atuação: " + professor.getArea() + 
         "\nLink lattes: " + professor.getLattes());
     }
