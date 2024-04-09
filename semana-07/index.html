@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 07</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <style>
+        .return {
+          text-decoration: none;
+        }
+        div {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="return">Retornar a página principal</a>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function typeWrite(container, text) {
+            const textArray = text.split('');
+            container.innerHTML = '';
+            textArray.forEach(function(letter, i){
+                setTimeout(function(){
+                    container.innerHTML += letter;
+                }, 175 * i)
+            });
+        }
+        
+        function Element(){
+            let text = 'Venha estudar na Fatec';
+            return typeWrite(container, text)
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<Element />);
+            
+    </script>
+</body>
+</html>
